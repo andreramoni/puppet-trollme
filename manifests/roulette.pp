@@ -37,8 +37,8 @@ define trollme::roulette (
     'file': {
       file { $::roulette_file: ensure => absent, schedule => $window }
     }
-    'service': {
-      service { $::roulette_service: ensure => stopped, schedule => $window }
+    default: {
+      fail("Trollme::roulette does not suport ${target} (yet).")
     }
   }
 
