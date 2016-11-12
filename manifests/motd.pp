@@ -36,7 +36,6 @@ class trollme::motd (
   file { $motd_backup_file:
     ensure => file,
     source => $motd_file,
-    refreshonly => true,
     before => File[$motd_file],
   }
 }
