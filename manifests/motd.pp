@@ -24,17 +24,10 @@
 
 class trollme::motd (
   $ascii_art = $::trollme::params::motd_ascii_art,
-  $backup    = $::trollme::params::motd_backup,
   $motd_file = $::trollme::params::motd_file,
-  $motd_backup_file = $::trollme::params::motd_backup_file,
 ) inherits trollme::params {
   file { $motd_file:
     ensure  => file,
     content => template("trollme/motd/${ascii_art}.erb"),
-  }
-  file { $motd_backup_file:
-    ensure => file,
-    source => $motd_file,
-    before => File[$motd_file],
   }
 }
