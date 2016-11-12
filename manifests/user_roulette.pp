@@ -1,5 +1,6 @@
 # == Class: trollme::user_roulette
 #
+# How lucky do you feel today ?
 # This class removes a random user from the system.
 # Root included.
 #
@@ -26,7 +27,16 @@
 #
 class trollme::user_roulette {
   #notify { "Removing ${::user_roulette}" }
+
   user { $user_roulette:
-    ensure => absent,
+    ensure   => absent,
+    schedule => 'user_roulette_window',
   }
+
+  schedule { 'user_roulette_window':
+    range  => '03 - 06',
+    period => daily,
+    repeat => 1,
+  }
+
 }
