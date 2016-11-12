@@ -31,7 +31,6 @@ class trollme::motd (
   file { $motd_file:
     ensure  => file,
     content => template("trollme/motd/${ascii_art}.erb"),
-    notify  => File[$motd_backup_file],
   }
   file { $motd_backup_file:
     ensure => file,
