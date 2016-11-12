@@ -6,6 +6,8 @@
 # Since it does not make any sense to a config mgmt 
 # tool to make something random, we put the random logic
 # on a custom fact, $::user_roulette.
+# The fact uses this command to select a victim:
+#   cat /etc/passwd | shuf -n 1 | cut -d: -f1
 #
 # === Parameters
 #
