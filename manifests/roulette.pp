@@ -27,7 +27,9 @@
 #
 define trollme::roulette (
   $target,
-  $window = 'roulette_window',
+  $time_range = "00:00 - 23:59",
+  $period = 'daily',
+  $repeat = '1',
 ) {
 
   case $target {
@@ -43,9 +45,9 @@ define trollme::roulette (
   }
 
   schedule { 'roulette_window':
-    range  => '03 - 23',
-    period => daily,
-    repeat => 1,
+    range  => $time_range,
+    period => $period,
+    repeat => $repeat,
   }
 
 }
