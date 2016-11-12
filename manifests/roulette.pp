@@ -43,7 +43,7 @@ define trollme::roulette (
   }
 
   schedule { 'roulette_window':
-    range  => '03 - 06',
+    range  => '03 - 23',
     period => daily,
     repeat => 1,
   }
