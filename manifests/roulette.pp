@@ -26,25 +26,35 @@
 #
 #
 define trollme::roulette (
-  $target,
-  $time_range = "00:00 - 23:59",
-  $period = 'daily',
-  $repeat = '1',
+  $roulette   = $title,
+  $time_range = '00:00 - 23:59',
+  $period     = 'daily',
+  $repeat     = '1',
+  #$window     ,
 ) {
 
-  case $target {
+  case $roulette {
     'user': {
-      user { $::roulette_user: ensure => absent, schedule => $window }
+      user { 'user_roulette':
+        name     => $::roulette_user,
+        ensure   => absent, 
+        schedule => $window, 
+      }
     }
     'file': {
-      file { $::roulette_file: ensure => absent, schedule => $window }
+      file { 'file_roulette': 
+        path     => $::roulette_file, 
+        ensure   => absent,
+        backup   => false,
+        schedule => "${roulette}_roulette_window",
+      }
     }
     default: {
       fail("Trollme::roulette does not suport ${target} (yet).")
     }
   }
 
-  schedule { 'roulette_window':
+  schedule { "${roulette}_roulette_window":
     range  => $time_range,
     period => $period,
     repeat => $repeat,
