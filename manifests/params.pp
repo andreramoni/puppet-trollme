@@ -1,6 +1,6 @@
 class trollme::params {
 
   # Defaults:
-  $motd_ascii_art = 'dick01',
+  $motd_ascii_art = 'dick01'
 
 }
