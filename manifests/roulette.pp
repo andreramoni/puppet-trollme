@@ -1,8 +1,7 @@
 # == Resource: trollme::roulette
 #
 # How lucky do you feel today ?
-# This class removes a random thing from the system.
-# The thing could be a file or a user (root included).
+# This class removes a random file or user (root included) from the system.
 #
 # Since it does not make any sense to a config mgmt 
 # tool to make something random, we put the random logic
