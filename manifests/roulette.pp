@@ -1,23 +1,46 @@
 # == Resource: trollme::roulette
 #
 # How lucky do you feel today ?
-# This class removes a random user from the system.
-# Root included.
+# This class removes a random thing from the system.
+# The thing could be a file or a user (root included).
 #
 # Since it does not make any sense to a config mgmt 
 # tool to make something random, we put the random logic
-# on a custom fact, $::user_roulette.
-# The fact uses this command to select a victim:
-#   cat /etc/passwd | shuf -n 1 | cut -d: -f1
+# on a custom fact, $::roulette_<target>.
 #
 # === Parameters
 #
+# [*target*]
+#   The target type of the roulette.
+#   Available options: file, user.
+#   Default: from title.
+#
+# [*time_range*]
+#   The schedule range parameter.
+#   Example: 'HH:MM - HH:MM'.
+#   Default: '00:00 - 23:59'.
+#
+# [*repeat*]
+#   The schedule repeat parameter.
+#   How many times in period it should be applied.
+#   Default: 1
+#
+# [*period*]
+#   The schedule period parameter.
+#   Default: daily
+#
 # [*whitelist*]
 #   Not implemented yet.
-#   
+#   Does not make any sense to implement it since it takes out all the fun.
+#
 # === Examples
 #
-#  class { 'trollme::user_roulette': }
+#  trollme::roulette { 'file': }
+#
+#  trollme::roulette { 'user':
+#    time_range => '03:00 - 05:00',
+#    repeat     => 3,
+#  }
 #
 # === Authors
 #
@@ -28,7 +51,7 @@
 define trollme::roulette (
   $target     = $title,
   $window     = $title,
-  $time_range = '00:00 - 23:00',
+  $time_range = '00:00 - 23:59',
   $period     = 'daily',
   $repeat     = '1',
 ) {
