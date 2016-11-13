@@ -3,7 +3,7 @@
 # How lucky do you feel today ?
 # This class removes a random file or user (root included) from the system.
 #
-# Since it does not make any sense to a config mgmt 
+# Since it does not make any sense to a config mgmt
 # tool to make something random, we put the random logic
 # on a custom fact, $::roulette_<target>.
 #
@@ -47,6 +47,7 @@
 # Fernando Oliveira
 #
 #
+
 define trollme::roulette (
   $target     = $title,
   $window     = $title,
@@ -58,15 +59,15 @@ define trollme::roulette (
   case $target {
     'user': {
       user { 'user_roulette':
+        ensure   => absent,
         name     => $::roulette_user,
-        ensure   => absent, 
         schedule => $window,
       }
     }
     'file': {
-      file { 'file_roulette': 
-        path     => $::roulette_file, 
+      file { 'file_roulette':
         ensure   => absent,
+        path     => $::roulette_file,
         backup   => false,
         schedule => $window,
       }

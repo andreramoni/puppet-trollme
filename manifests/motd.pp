@@ -5,17 +5,14 @@
 # === Parameters
 #
 # [*ascii_art*]
-#   What ASCII ART to put on /etc/motd. 
+#   What ASCII ART to put on /etc/motd.
 #   You can see all the available options on templates/motd/.
 #   We use templates so you can customize it with a fact for example.
-#
-# [*backup*]
-#   If we should make a backup of the original file
 #
 # === Examples
 #
 #  class { 'trollme::motd':
-#    ascii_art => 'dick01',
+#    ascii_art => 'stopthedick',
 #  }
 #
 # === Authors
