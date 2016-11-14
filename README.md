@@ -69,7 +69,8 @@ class { 'trollme::motd':
   ascii_art => 'stopthedick',
 }
 ~~~
-The `ascii_art` parameter should specify an existing template on `templates/motd`. Go there and see all the available options.
+The `ascii_art` parameter should specify an existing template on `templates/motd`.
+Go there and see all the available options.
 
 ### command_not_found
 
