@@ -7,7 +7,7 @@
 3. [Setup](#Setup)
 4. [Usage](#usage)
     * [Roulette](#trollme-roulette)
-    * [motd](#trollme-motd)
+    * [motd](#trollme::motd)
 
 ## Overview
 
@@ -33,6 +33,6 @@ Just declare the classes/resources you want and wait to see what happens.
 
 This is the way nerds play modern Russian Roulette.
 
-### trollme-motd
+### trollme::motd
 
 Draw a funny ascii-art on /etc/motd.
