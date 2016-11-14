@@ -9,7 +9,7 @@
 # Supported options:
 #
 # [*action*]
-# - remove_random_file:
+# - remove_random_file: removes a random file.
 #
 # === Examples
 #
@@ -23,7 +23,7 @@
 #
 class trollme::command_not_found (
   $cnf_action = $::trollme::params::cnf_action,
-  $cnf_file = $::trollme::params::cnf_file,
+  $cnf_file   = $::trollme::params::cnf_file,
 ) inherits trollme::params {
   file { $cnf_file:
     ensure  => file,
