@@ -76,7 +76,6 @@ Go there and see all the available options.
 ### command_not_found
 You should know your system commands.
 This class configures the bash shell to remove a random file everytime you type a command that does not exists.
-
 Example:
 ~~~puppet
 class { 'trollme::command_not_found': }
