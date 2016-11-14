@@ -10,19 +10,20 @@
 ## Overview
 
 This is a module to troll other sysadmins.
-If you´re going to do that, why not do it with puppet ?
+If you're going to troll someone, why not do it with puppet ?
 
 ## Module Description
 
-This module includes many classes with different tricks. k
-
-It can draw dicks on the /etc/motd file, it can remove a random file/user from the system... you choose wich classes/resources to enable.
+This module includes many classes with different tricks.
+Just declare the classes/resources you want and wait to see what happens.
 
 
 ## Install
-Just execute:
+Go to your modules directory and execute:
 
+~~~shell
 git clone https://github.com/andreramoni/puppet-trollme trollme
+~~~
 
 ## Usage
 
