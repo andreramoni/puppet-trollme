@@ -6,7 +6,7 @@
 2. [Module Description](#module-description)
 3. [Setup](#Setup)
 4. [Usage](#usage)
-    * [Roulette](#roulette)
+    * [roulette](#roulette)
     * [motd](#motd)
 
 ## Overview
@@ -17,6 +17,7 @@ If you're going to troll someone, why not do it with puppet ?
 ## Module Description
 
 This module includes many classes with different tricks.
+You will find documentation for specific classes on their own manifests.
 
 ## Setup
 Go to your modules directory and execute:
