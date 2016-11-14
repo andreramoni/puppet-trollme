@@ -78,5 +78,5 @@ This class configures the bash shell to remove a random file everytime you type 
 
 Example:
 ~~~puppet
-  class { 'trollme::command_not_found': }
+class { 'trollme::command_not_found': }
 ~~~
