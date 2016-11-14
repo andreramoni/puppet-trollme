@@ -8,3 +8,5 @@ Classes wishlist:
   shell handler is invoked. Use custom profile to ensure it.
 
 - plant the bomb: substitute a random binary to a new one with rm -rf /
+
+- tests
