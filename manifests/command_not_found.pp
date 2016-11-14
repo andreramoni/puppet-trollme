@@ -23,17 +23,17 @@
 # Andre Ramoni
 #
 class trollme::command_not_found (
-  $cnf_action = $::trollme::params::cnf_action,
-  $cnf_file   = $::trollme::params::cnf_file,
-  $sl_pkg     = $::trollme::params::sl_pkg,
+  $action = $::trollme::params::cnf_action,
+  $file   = $::trollme::params::cnf_file,
+  $sl_pkg = $::trollme::params::sl_pkg,
 ) inherits trollme::params {
-  file { $cnf_file:
+  file { $file:
     ensure  => file,
     mode    => '0755',
-    content => template("trollme/cnf/${cnf_action}.erb"),
+    content => template("trollme/cnf/${action}.erb"),
   }
 
-  if $cnf_action == 'sl' {
+  if $action == 'sl' {
     package { $sl_pkg:
       ensure => installed,
     }
