@@ -46,10 +46,10 @@ trollme::roulette { 'user': }
 Would remove a random user (including root) every day.
 
 Current supported types are:
-- user: removes a random user.
-- file: removes a random file.
-- process: kills a random process. PID got from `ps` command.
-- pid: kills a random process. PID got from `cat /var/run/*.pid | shuf -n 1`
+- `user`: removes a random user.
+- `file`: removes a random file.
+- `process`: kills a random process. PID got from `ps` command.
+- `pid`: kills a random process. PID got from `cat /var/run/*.pid | shuf -n 1`
 
 You can also tell puppet about the schedule window and how many of a kind should go away in each schedule window:
 ~~~puppet
