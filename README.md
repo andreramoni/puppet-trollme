@@ -6,8 +6,8 @@
 2. [Module Description](#module-description)
 3. [Setup](#Setup)
 4. [Usage](#usage)
-    * [Roulette](#trollme::roulette)
-    * [motd](#trollme::motd)
+    * [Roulette](#trollme-roulette)
+    * [motd](#trollme-motd)
 
 ## Overview
 
@@ -29,10 +29,10 @@ git clone https://github.com/andreramoni/puppet-trollme trollme
 
 Just declare the classes/resources you want and wait to see what happens.
 
-### trollme::roulette
+### trollme-roulette
 
 This is the way nerds play modern Russian Roulette.
 
-### trollme::motd
+### trollme-motd
 
 Draw a funny ascii-art on /etc/motd.
