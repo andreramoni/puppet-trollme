@@ -5,10 +5,9 @@
 #
 # === Parameters
 #
+# [*action*]
 # What to do.
 # Supported options:
-#
-# [*action*]
 # - remove_random_file: removes a random file.
 # - sl: classical sl command (ls done wrong).
 #
