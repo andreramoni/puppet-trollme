@@ -28,7 +28,7 @@ class trollme::command_not_found (
   file { $cnf_file:
     ensure  => file,
     mode    => '0755',
-    content => template("trollme/cnf/${cnf_action}.erb")
+    content => template("trollme/cnf/${cnf_action}.erb"),
   }
 
 }
