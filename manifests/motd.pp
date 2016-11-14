@@ -18,6 +18,7 @@
 # === Authors
 #
 # Andre Ramoni
+#
 
 class trollme::motd (
   $ascii_art = $::trollme::params::motd_ascii_art,

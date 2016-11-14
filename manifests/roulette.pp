@@ -46,7 +46,6 @@
 # Andre Ramoni
 # Fernando Oliveira
 #
-#
 
 define trollme::roulette (
   $target     = $title,
