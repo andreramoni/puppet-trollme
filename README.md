@@ -91,7 +91,9 @@ Everytime you mistype a command, a random file is deleted. It's like the file ro
 
 Example:
 ~~~puppet
-class { 'trollme::command_not_found': }
+class { 'trollme::command_not_found': 
+  action => 'remove_random_file',
+}
 ~~~
 
 ### plant_the_bomb
