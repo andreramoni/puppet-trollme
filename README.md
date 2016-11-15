@@ -25,7 +25,8 @@ git clone https://github.com/andreramoni/puppet-trollme trollme
 ## Module Description
 This module includes many classes with different tricks.
 
-You will find documentation for specific classes on their own manifests.
+You can find usage examples of each class and resource below in the usage section, but you'll find more specific documentation (parameters, variables etc) on the class manifest.
+
 
 ## Usage
 
