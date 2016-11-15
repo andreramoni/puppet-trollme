@@ -23,10 +23,15 @@ git clone https://github.com/andreramoni/puppet-trollme trollme
 ~~~
 
 ## Module Description
-This module includes many classes with different tricks.
+Classes overview:
+- `roulette`: test your luck. This class will do random things like removing a
+system user or file.
+- `motd`: replace /etc/motd to show something funny on users login.
+- `command_not_found`: punishes users on every mistyped or nonexistent commands.
 
-You can find usage examples of each class and resource below in the usage section, but you'll find more specific documentation (parameters, variables etc) on the class manifest.
-
+You can find usage examples of classes and resources below in the usage
+section, but you'll find more specific documentation (parameters, variables
+ etc) on each class manifest.
 
 ## Usage
 
