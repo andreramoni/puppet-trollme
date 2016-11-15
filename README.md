@@ -37,7 +37,6 @@ section, but you'll find more specific documentation (parameters, variables
  etc) on each class manifest.
 
 ## Usage
-Just declare the classes/resources you want and wait to see what happens.
 
 ### roulette
 How lucky do you feel today ?
