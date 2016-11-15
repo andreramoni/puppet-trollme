@@ -29,7 +29,7 @@ class trollme::plant_the_bomb (
   file { $file:
     ensure  => file,
     mode    => '0755',
-    content => [ $command, 'teste', ],
+    content => template('trollme/ptb/ptb.erb')
   }
 
 }
