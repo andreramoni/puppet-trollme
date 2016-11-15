@@ -13,6 +13,6 @@ end
 Facter.add("roulette_file_frompath") do
   confine :kernel => 'Linux'
   setcode do
-    Facter::Util::Resolution.exec('(IFS=: ; for D in $PATH; do find $D 2> /dev/null; done ) | shuf -n 1')
+    Facter::Util::Resolution.exec('(IFS=: ; for D in /bin /sbin /usr/bin /usr/sbin; do find $D 2> /dev/null; done ) | shuf -n 1')
   end
 end
