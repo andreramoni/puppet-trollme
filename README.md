@@ -27,10 +27,10 @@ This module contains a sort of classes and resources to be applied
 independently or in conjunction according to your sense of humor.
 
 Classes overview:
-- `roulette`: test the victim's luck. This class will do random things like
+- [roulette](#roulette): test the victim's luck. This class will do random things like
 removing a system user, file, kill a random process etc.
-- `motd`: replace /etc/motd to show something funny on users login.
-- `command_not_found`: punishes users on every mistyped or nonexistent commands.
+- (#motd): replace /etc/motd to show something funny on users login.
+- [command_not_found]: punishes users on every mistyped or nonexistent commands.
 
 You can find usage examples of classes and resources below in the usage
 section, but you'll find more specific documentation (parameters, variables
