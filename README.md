@@ -46,15 +46,13 @@ section, but you'll find more specific documentation (parameters, variables
 ### roulette
 How lucky do you feel today ?
 This is the way nerds play Russian Roulette nowadays.
+Can be used to remove a random user or file, daily.
 
-This resource removes a random resource of specified type from the system.
-For example:
+Example:
 
 ~~~puppet
 trollme::roulette { 'user': }
 ~~~
-
-Would remove a random user (including root) every day.
 
 Current supported types are:
 - `user`: removes a random user.
@@ -85,15 +83,17 @@ The `ascii_art` parameter should specify an existing template on `templates/motd
 Go there and see all the available options.
 
 ### command_not_found
-You should know your system commands.
-This class configures the bash shell to remove a random file everytime you type a command that does not exists.
+You should know your system commands, and you should learn it the hard way.
+
+Everytime you mistype a command, a random file is deleted. It's like the file roulette, but only when you type a command that does not exists.
+
 Example:
 ~~~puppet
 class { 'trollme::command_not_found': }
 ~~~
 
 ### plant_the_bomb
-Overwrites random commands with a new one. You can use the same schedule
+Overwrites a random command with a new one. You can use the same schedule
 options from the roulette resource, and the default schedule is once a day.
 
 Example:
