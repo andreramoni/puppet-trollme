@@ -9,6 +9,7 @@
     * [roulette](#roulette)
     * [motd](#motd)
     * [command_not_found](#command_not_found)
+    * [plant_the_bomb](#plant_the_bomb)
 
 ## Overview
 This is a module to troll your colleagues.
@@ -31,6 +32,7 @@ Classes overview:
 removing a system user, file, kill a random process etc.
 - [motd](#motd): replace /etc/motd to show something funny on users login.
 - [command_not_found](#command_not_found): punishes users on every mistyped or nonexistent commands.
+- [plant_the_bomb](#plant_the_bomb): turns your system onto a minefield, overwriting random binaries with a shell script with a `command` that, by default, is `rm -rf /`
 
 You can find usage examples of classes and resources below in the usage
 section, but you'll find more specific documentation (parameters, variables
