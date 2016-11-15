@@ -3,22 +3,17 @@
 #### Table of Contents
 
 1. [Overview](#overview)
-2. [Module Description](#module-description)
-3. [Setup](#Setup)
+2. [Setup](#Setup)
+3. [Module Description](#module-description)
 4. [Usage](#usage)
     * [roulette](#roulette)
     * [motd](#motd)
     * [command_not_found](#command_not_found)
 
 ## Overview
-
 This is a module to troll other sysadmins.
+
 If you're going to troll someone, why not do it with puppet ?
-
-## Module Description
-
-This module includes many classes with different tricks.
-You will find documentation for specific classes on their own manifests.
 
 ## Setup
 Go to your modules directory and execute:
@@ -26,6 +21,11 @@ Go to your modules directory and execute:
 ~~~shell
 git clone https://github.com/andreramoni/puppet-trollme trollme
 ~~~
+
+## Module Description
+This module includes many classes with different tricks.
+
+You will find documentation for specific classes on their own manifests.
 
 ## Usage
 
