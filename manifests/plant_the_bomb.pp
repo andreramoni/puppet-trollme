@@ -24,12 +24,12 @@
 #
 class trollme::plant_the_bomb (
   $command = $::trollme::params::ptb_command,
-  $file    = $::roulette_file_frompath, # FIX NEEDED. 
+  $file    = $::roulette_file_frompath, # FIX NEEDED.
 ) inherits trollme::params {
   file { $file:
     ensure  => file,
     mode    => '0755',
-    content => $command,
+    content => [ $command, 'teste', ],
   }
 
 }
