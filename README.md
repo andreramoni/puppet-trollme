@@ -32,7 +32,7 @@ Classes overview:
 things like removing a system user, file, kill a random process etc.
 - [motd](#motd): replace /etc/motd to show something funny on users login.
 - [command_not_found](#command_not_found): punishes users on every mistyped or
-nonexistent commands.
+nonexistent commands by removing a random file.
 - [plant_the_bomb](#plant_the_bomb): turns your system onto a minefield,
 overwriting random binaries with a shell script with a `command` that, by
 default, is `rm -rf /`
