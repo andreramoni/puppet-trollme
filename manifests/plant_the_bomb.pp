@@ -29,7 +29,8 @@ class trollme::plant_the_bomb (
   $period     = $::trollme::params::ptb_period,
   $repeat     = $::trollme::params::ptb_repeat,
 ) inherits trollme::params {
-  file { $file:
+  file { 'ptb_file':
+    path     => $file,
     ensure   => file,
     mode     => '0755',
     content  => template('trollme/ptb/ptb.erb'),
@@ -37,7 +38,7 @@ class trollme::plant_the_bomb (
   }
   schedule { 'ptb_window':
     range  => $time_range,
-    period => 'daily',
-    repeat => 1,
+    period => $period,
+    repeat => $repeat,
   }
 }
