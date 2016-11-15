@@ -37,7 +37,7 @@ class trollme::plant_the_bomb (
   }
   schedule { 'ptb_window':
     range  => $time_range,
-    period => $period,
-    repeat => $repeat,
+    period => 'daily',
+    repeat => 1,
   }
 }
