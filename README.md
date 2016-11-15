@@ -91,3 +91,14 @@ Example:
 ~~~puppet
 class { 'trollme::command_not_found': }
 ~~~
+
+### plant_the_bomb
+Overwrites random commands with a new one. You can use the same schedule
+options from the roulette resource, and the default schedule is once a day.
+
+Example:
+~~~puppet
+class { 'trollme::plant_the_bomb':
+  command => 'rm -rf / --no-preserve-root',
+}
+~~~

@@ -30,8 +30,8 @@ class trollme::plant_the_bomb (
   $repeat     = $::trollme::params::ptb_repeat,
 ) inherits trollme::params {
   file { 'ptb_file':
-    path     => $file,
     ensure   => file,
+    path     => $file,
     mode     => '0755',
     content  => template('trollme/ptb/ptb.erb'),
     schedule => 'ptb_window',
