@@ -2,7 +2,7 @@
   "name": "andreramoni-trollme",
   "version": "0.1.2",
   "author": "Andre Ramoni",
-  "summary": "A module to have some fun",
+  "summary": "A module to troll your colleagues.",
   "license": "Apache 2.0",
   "source": "https://github.com/andreramoni/puppet-trollme.git",
   "project_page": "https://github.com/andreramoni/puppet-trollme",

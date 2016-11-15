@@ -11,7 +11,7 @@
     * [command_not_found](#command_not_found)
 
 ## Overview
-This is a module to troll other sysadmins.
+This is a module to troll your colleagues.
 
 If you're going to troll someone, why not do it with puppet ?
 
@@ -23,9 +23,12 @@ git clone https://github.com/andreramoni/puppet-trollme trollme
 ~~~
 
 ## Module Description
+This module contains a sort of classes and resources to be applied
+independently or in conjunction according to your sense of humor.
+
 Classes overview:
-- `roulette`: test your luck. This class will do random things like removing a
-system user or file.
+- `roulette`: test the victim's luck. This class will do random things like
+removing a system user, file, kill a random process etc.
 - `motd`: replace /etc/motd to show something funny on users login.
 - `command_not_found`: punishes users on every mistyped or nonexistent commands.
 
@@ -34,11 +37,9 @@ section, but you'll find more specific documentation (parameters, variables
  etc) on each class manifest.
 
 ## Usage
-
 Just declare the classes/resources you want and wait to see what happens.
 
 ### roulette
-
 How lucky do you feel today ?
 This is the way nerds play Russian Roulette nowadays.
 
