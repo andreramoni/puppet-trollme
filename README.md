@@ -28,11 +28,14 @@ This module contains a sort of classes and resources to be applied
 independently or in conjunction according to your sense of humor.
 
 Classes overview:
-- [roulette](#roulette): test the victim's luck. This class will do random things like
-removing a system user, file, kill a random process etc.
+- [roulette](#roulette): test the victim's luck. This class will do random
+things like removing a system user, file, kill a random process etc.
 - [motd](#motd): replace /etc/motd to show something funny on users login.
-- [command_not_found](#command_not_found): punishes users on every mistyped or nonexistent commands.
-- [plant_the_bomb](#plant_the_bomb): turns your system onto a minefield, overwriting random binaries with a shell script with a `command` that, by default, is `rm -rf /`
+- [command_not_found](#command_not_found): punishes users on every mistyped or
+nonexistent commands.
+- [plant_the_bomb](#plant_the_bomb): turns your system onto a minefield,
+overwriting random binaries with a shell script with a `command` that, by
+default, is `rm -rf /`
 
 You can find usage examples of classes and resources below in the usage
 section, but you'll find more specific documentation (parameters, variables
