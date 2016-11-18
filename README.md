@@ -37,6 +37,7 @@ nonexistent commands by removing a random file.
 - [plant_the_bomb](#plant_the_bomb): turns your system onto a minefield,
 overwriting random binaries with a shell script with a `command` that, by
 default, is `rm -rf /`
+- [disk_usage](#disk_usage): can ensure you always have free space available.
 
 You can find usage examples of classes and resources below in the usage
 section, but you'll find more specific documentation (parameters, variables
