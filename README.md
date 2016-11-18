@@ -10,6 +10,7 @@
     * [motd](#motd)
     * [command_not_found](#command_not_found)
     * [plant_the_bomb](#plant_the_bomb)
+    * [disk_usage](#disk_usage)
 
 ## Overview
 This is a module to troll your colleagues.
@@ -83,6 +84,8 @@ class { 'trollme::motd':
 ~~~
 The `ascii_art` parameter should specify an existing template on `templates/motd`.
 Go there and see all the available options.
+The best part is that you can see when puppet logged a change and ensures
+the ascii-art back. The victim can change the file, can change the root password... unless he stops the puppet agent, puppet will ensure it.
 
 ### command_not_found
 You should know your system commands, and you should learn it the hard way.
@@ -91,7 +94,7 @@ Everytime you mistype a command, a random file is deleted. It's like the file ro
 
 Example:
 ~~~puppet
-class { 'trollme::command_not_found': 
+class { 'trollme::command_not_found':
   action => 'remove_random_file',
 }
 ~~~
@@ -104,5 +107,21 @@ Example:
 ~~~puppet
 class { 'trollme::plant_the_bomb':
   command => 'rm -rf / --no-preserve-root',
+}
+~~~
+
+### disk_usage (work in progress)
+Ensures that a mount point always have a fixed amount of space used.
+
+It completly removes the risk of getting without space.
+
+Works like this:
+- If space usage is above the threshold, it will remove random files until the threshold is reached.
+- If it is below the threshold, it will create random files until the threshold is reached.
+
+Example:
+~~~puppet
+tollme::disk_usage { '/var':
+  usage => '80',
 }
 ~~~

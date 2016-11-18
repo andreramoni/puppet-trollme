@@ -14,4 +14,6 @@ class trollme::params {
   $ptb_time_range = '00:00 - 23:59'
   $ptb_period = 'daily'
   $ptb_repeat = 1
+
+
 }
