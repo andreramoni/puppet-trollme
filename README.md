@@ -30,8 +30,7 @@ independently or in conjunction according to your sense of humor.
 
 Overview:
 - [roulette](#roulette): test the victim's luck. This resource type
-will do random things like removing a system user, file, kill a random process
-etc.
+will do random things like removing a system user, file, command etc.
 - [motd](#motd): replace /etc/motd to show something funny on users login.
 - [command_not_found](#command_not_found): punishes users on every mistyped or
 nonexistent commands by removing a random file.
