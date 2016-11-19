@@ -10,9 +10,16 @@
 #
 define trollme::disk_usage (
     $usage,
+    $mountpoint = $title,
 ) {
   exec { "disk_usage_${title}":
-    command => '',
+    command => "/sbin/trollme_disk_usage.sh ${mountpoint} ${usage}",
+    require => File['/sbin/trollme_disk_usage.sh']
+  }
+  file { '/sbin/trollme_disk_usage.sh':
+    ensure => file,
+    mode   => '0755',
+    source => 'puppet:///modules/trollme/disk_usage/trollme_disk_usage.sh',
   }
 
 }

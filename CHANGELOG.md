@@ -1,3 +1,12 @@
+## Release 0.1.5
+### Summary
+Added a new type.
+#### Features
+- Added trollme:disk_usage resource.
+
+#### Bugfixes
+
+
 ## Release 0.1.4
 ### Summary
 
