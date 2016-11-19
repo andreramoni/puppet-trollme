@@ -22,4 +22,12 @@ class trollme (
     require => Package[$locate_pkg]
   }
 
+  #
+  file { 'trollme_disk_usage.sh':
+    ensure => file,
+    path   => '/sbin/trollme_disk_usage.sh',
+    mode   => '0755',
+    source => 'puppet:///modules/trollme/disk_usage/trollme_disk_usage.sh',
+  }
+
 }
