@@ -69,6 +69,7 @@ define trollme::roulette (
         backup   => false,
         schedule => $window,
       }
+    }
     'command': {
       file { 'command_roulette':
         ensure   => absent,
