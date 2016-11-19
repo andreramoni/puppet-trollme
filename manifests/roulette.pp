@@ -53,7 +53,7 @@ define trollme::roulette (
   $period     = 'daily',
   $repeat     = '1',
 ) {
-  require trollme
+  require ::trollme
   case $target {
     'user': {
       user { 'user_roulette':
