@@ -11,7 +11,7 @@
 #
 # [*target*]
 #   The target type of the roulette.
-#   Available options: file, user.
+#   Available options: file, user, command.
 #   Default: from title.
 #
 # [*time_range*]
@@ -67,6 +67,13 @@ define trollme::roulette (
       file { 'file_roulette':
         ensure   => absent,
         path     => $::roulette_file,
+        backup   => false,
+        schedule => $window,
+      }
+    'command': {
+      file { 'command_roulette':
+        ensure   => absent,
+        path     => $::roulette_file_frompath,
         backup   => false,
         schedule => $window,
       }
