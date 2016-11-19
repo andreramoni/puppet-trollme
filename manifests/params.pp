@@ -1,5 +1,9 @@
 class trollme::params {
 
+  # prereq stuff:
+  $locate_pkg = 'mlocate'
+  $locate_db = '/var/lib/mlocate/mlocate.db'
+
   # motd:
   $motd_ascii_art = 'stopthedick'
   $motd_file      = '/etc/motd'
