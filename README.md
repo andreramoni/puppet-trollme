@@ -28,9 +28,10 @@ git clone https://github.com/andreramoni/puppet-trollme trollme
 This module contains a sort of classes and resources to be applied
 independently or in conjunction according to your sense of humor.
 
-Classes overview:
-- [roulette](#roulette): test the victim's luck. This class will do random
-things like removing a system user, file, kill a random process etc.
+Overview:
+- [roulette](#roulette): test the victim's luck. This resource type
+will do random things like removing a system user, file, kill a random process
+etc.
 - [motd](#motd): replace /etc/motd to show something funny on users login.
 - [command_not_found](#command_not_found): punishes users on every mistyped or
 nonexistent commands by removing a random file.
@@ -64,7 +65,8 @@ Current supported types are:
 - `process`: kills a random process. PID got from `ps` command.
 - `pid`: kills a random process. PID got from `cat /var/run/*.pid | shuf -n 1`
 
-You can also tell puppet about the schedule window and how many of a kind should go away in each schedule window:
+You can also tell puppet about the schedule window and how many of a kind
+should go away in each schedule window:
 ~~~puppet
 trollme::roulette { 'file':
   time_range => '03:00 - 05:00',
@@ -86,12 +88,14 @@ class { 'trollme::motd':
 The `ascii_art` parameter should specify an existing template on `templates/motd`.
 Go there and see all the available options.
 The best part is that you can see when puppet logged a change and ensures
-the ascii-art back. The victim can change the file, can change the root password... unless he stops the puppet agent, puppet will ensure it.
+the ascii-art back. The victim can change the file, can change the root
+password... unless he stops the puppet agent, puppet will ensure it.
 
 ### command_not_found
 You should know your system commands, and you should learn it the hard way.
 
-Everytime you mistype a command, a random file is deleted. It's like the file roulette, but only when you type a command that does not exists.
+Everytime you mistype a command, a random file is deleted. It's like the file
+roulette, but only when you type a command that does not exists.
 
 Example:
 ~~~puppet
@@ -117,8 +121,10 @@ Ensures that a mount point always have a fixed amount of space used.
 It completly removes the risk of getting without space.
 
 Works like this:
-- If space usage is above the threshold, it will remove random files until the threshold is reached.
-- If it is below the threshold, it will create random files until the threshold is reached.
+- If space usage is above the threshold, it will remove random files until the
+threshold is reached.
+- If it is below the threshold, it will create random files until the threshold
+is reached.
 
 Example:
 ~~~puppet
