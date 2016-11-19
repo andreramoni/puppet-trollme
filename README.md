@@ -61,8 +61,9 @@ trollme::roulette { 'user': }
 Current supported types are:
 - `user`: removes a random user.
 - `file`: removes a random file.
-- `process`: kills a random process. PID got from `ps` command.
-- `pid`: kills a random process. PID got from `cat /var/run/*.pid | shuf -n 1`
+- `command`: removes a random binary from /bin, /usr/bin, /sbin or /usr/sbin.
+
+
 
 You can also tell puppet about the schedule window and how many of a kind
 should go away in each schedule window:
