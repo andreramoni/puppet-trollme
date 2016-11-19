@@ -117,7 +117,7 @@ class { 'trollme::plant_the_bomb':
 ### disk_usage
 Ensures that a mount point always have a fixed amount of space used.
 
-It completly removes the risk of getting without space.
+It completly removes the risk of running out of space.
 
 Works like this:
 - If space usage is above the threshold, it will remove random files until the
