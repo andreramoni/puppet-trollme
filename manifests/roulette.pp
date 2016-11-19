@@ -46,7 +46,6 @@
 # Andre Ramoni
 # Fernando Oliveira
 #
-
 define trollme::roulette (
   $target     = $title,
   $window     = $title,
@@ -54,7 +53,7 @@ define trollme::roulette (
   $period     = 'daily',
   $repeat     = '1',
 ) {
-
+  require trollme
   case $target {
     'user': {
       user { 'user_roulette':
