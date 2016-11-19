@@ -111,7 +111,7 @@ class { 'trollme::plant_the_bomb':
 }
 ~~~
 
-### disk_usage (work in progress)
+### disk_usage
 Ensures that a mount point always have a fixed amount of space used.
 
 It completly removes the risk of getting without space.
