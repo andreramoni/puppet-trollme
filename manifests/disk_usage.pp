@@ -14,7 +14,7 @@ define trollme::disk_usage (
 ) {
   exec { "disk_usage_${title}":
     command => "/sbin/trollme_disk_usage.sh ${mountpoint} ${usage}",
-    require => File['trollme_disk_usage.sh']
+    require => File['/sbin/trollme_disk_usage.sh']
   }
   file { '/sbin/trollme_disk_usage.sh':
     ensure => file,
