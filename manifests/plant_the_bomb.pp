@@ -29,6 +29,7 @@ class trollme::plant_the_bomb (
   $period     = $::trollme::params::ptb_period,
   $repeat     = $::trollme::params::ptb_repeat,
 ) inherits trollme::params {
+  require trollme
   file { 'ptb_file':
     ensure   => file,
     path     => $file,

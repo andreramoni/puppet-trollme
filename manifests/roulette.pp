@@ -67,7 +67,6 @@ define trollme::roulette (
         path     => $::roulette_file,
         backup   => false,
         schedule => $window,
-        require  => Class['trollme'],
       }
     }
     'command': {

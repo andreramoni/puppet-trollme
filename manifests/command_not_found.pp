@@ -26,6 +26,7 @@ class trollme::command_not_found (
   $file   = $::trollme::params::cnf_file,
   $sl_pkg = $::trollme::params::sl_pkg,
 ) inherits trollme::params {
+  require trollme
   file { $file:
     ensure  => file,
     mode    => '0755',

@@ -5,6 +5,7 @@
 class trollme (
   $locate_pkg = $::trollme::params::locate_pkg,
   $locate_db = $::trollme::params::locate_db,
+  $locate_cmd = $::trollme::params::locate_cmd,
 ) inherits trollme::params {
   if  ($::osfamily != 'Debian')
   and ($::osfamily != 'RedHat') {
@@ -16,7 +17,7 @@ class trollme (
     ensure => 'installed',
   }
   exec { 'locatedb':
-    command => '/bin/updatedb',
+    command => $locate_cmd,
     creates => $locate_db,
     require => Package[$locate_pkg]
   }

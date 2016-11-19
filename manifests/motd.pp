@@ -24,6 +24,7 @@ class trollme::motd (
   $ascii_art = $::trollme::params::motd_ascii_art,
   $file      = $::trollme::params::motd_file,
 ) inherits trollme::params {
+  require trollme
   file { $file:
     ensure  => file,
     content => template("trollme/motd/${ascii_art}.erb"),
