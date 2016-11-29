@@ -1,3 +1,12 @@
+## Release <not yet>
+### Summary
+
+#### Features
+
+#### Issues and bugfixes
+- disk_usage fact to avoid running exec when its not needed. Issue 12 (https://github.com/andreramoni/puppet-trollme/issues/12)
+
+
 ## Release 0.1.6
 ### Summary
 Many new scripts.
