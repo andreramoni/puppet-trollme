@@ -47,7 +47,7 @@ section, but you'll find more specific documentation (parameters, variables
 
 ## Usage
 
-### roulette
+## roulette
 How lucky do you feel today ?
 
 This is the way nerds play Russian Roulette nowadays.
