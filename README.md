@@ -47,12 +47,12 @@ section, but you'll find more specific documentation (parameters, variables
 
 ## Usage
 
-## roulette
+### roulette
 How lucky do you feel today ?
 
 This is the way nerds play Russian Roulette nowadays.
 
-Can be used to remove a random user or file, daily.
+Can be used to daily remove a random user or file, for example.
 
 Example:
 
