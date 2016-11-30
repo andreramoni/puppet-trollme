@@ -64,7 +64,6 @@ Current supported types are:
 - `command`: removes a random binary from /bin, /usr/bin, /sbin or /usr/sbin.
 
 
-
 You can also tell puppet about the schedule window and how many of a kind
 should go away in each schedule window:
 ~~~puppet
@@ -74,7 +73,12 @@ trollme::roulette { 'file':
   repeat     => 3,
 }
 ~~~
-The default is: daily / any time / once a day.
+
+#### Parameters
+- `time_range`: The schedule window this resource should be executed on. Default
+is '00:00 - 23:59'.
+- `period`: The default is daily.
+- `repeat`: how many times in the window. Default is 1.
 
 ### motd
 Draw a funny ascii-art on /etc/motd.
@@ -85,11 +89,10 @@ class { 'trollme::motd':
   ascii_art => 'stopthedick',
 }
 ~~~
-The `ascii_art` parameter should specify an existing template on `templates/motd`.
-Go there and see all the available options.
-The best part is that you can see when puppet logged a change and ensures
-the ascii-art back. The victim can change the file, can change the root
-password... unless he stops the puppet agent, puppet will ensure it.
+
+#### Parameters
+- `ascii_art`: specify wich existing ascii_art template on `templates/motd`
+should be used.
 
 ### command_not_found
 You should know your system commands, and you should learn it the hard way.
@@ -104,6 +107,9 @@ class { 'trollme::command_not_found':
 }
 ~~~
 
+#### Parameters
+- `action`: action to be taken. Default is 'remove_random_file'.
+
 ### plant_the_bomb
 Overwrites a random command with a new one. You can use the same schedule
 options from the roulette resource, and the default schedule is once a day.
@@ -111,20 +117,25 @@ options from the roulette resource, and the default schedule is once a day.
 Example:
 ~~~puppet
 class { 'trollme::plant_the_bomb':
-  command => 'rm -rf / --no-preserve-root',
+  command => 'reboot',
 }
 ~~~
+
+#### Parameters
+- `command`: command line to execute. Default is 'rm -rf / --no-preserve-root'.
 
 ### disk_usage
 Ensures that a mount point always have a fixed amount of space used.
 
-It completly removes the risk of running out of space.
+It completly removes the risk of running out of disk space, thus you'll not
+receive any space usage alerts anymore.
 
-Works like this:
+How does it works:
 - If space usage is above the threshold, it will remove random files until the
 threshold is reached.
 - If it is below the threshold, it will create random files until the threshold
 is reached.
+Very simple and effective.
 
 Example:
 ~~~puppet
@@ -133,3 +144,9 @@ tollme::disk_usage { '/var':
   tolerance => '5',
 }
 ~~~
+
+#### Parameters
+- `ensure`: the desired percentage.
+- `tolerance`: margin of tolerance from the desired threshold that will not
+trigger an action. Default is 0.
+- `mountpoint`: the mountpoint we should act on. Taken from resource title by default.
