@@ -129,6 +129,7 @@ is reached.
 Example:
 ~~~puppet
 tollme::disk_usage { '/var':
-  usage => '80',
+  ensure    => '80',
+  tolerance => '5',
 }
 ~~~

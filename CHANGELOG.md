@@ -1,11 +1,13 @@
 ## Release <not yet>
 ### Summary
+Disk usage controll is now working well.
 
 #### Features
 
 #### Issues and bugfixes
-- disk_usage fact to avoid running exec when its not needed. Issue 12 (https://github.com/andreramoni/puppet-trollme/issues/12)
-
+- Issue 12 (https://github.com/andreramoni/puppet-trollme/issues/12)
+  disk_usage fact to avoid running exec when its not needed.
+- Renamed disk_usage parameter 'usage' to 'ensure'.
 
 ## Release 0.1.6
 ### Summary
