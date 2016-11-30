@@ -43,6 +43,8 @@ You can find usage examples of classes and resources below in the usage
 section, but you'll find more specific documentation (parameters, variables
  etc) on each class manifest.
 
+---
+
 ## Usage
 
 ### roulette
@@ -80,6 +82,8 @@ is '00:00 - 23:59'.
 - `period`: The default is daily.
 - `repeat`: how many times in the window. Default is 1.
 
+---
+
 ### motd
 Draw a funny ascii-art on /etc/motd.
 
@@ -93,6 +97,8 @@ class { 'trollme::motd':
 #### Parameters
 - `ascii_art`: specify wich existing ascii_art template on `templates/motd`
 should be used.
+
+---
 
 ### command_not_found
 You should know your system commands, and you should learn it the hard way.
@@ -110,6 +116,8 @@ class { 'trollme::command_not_found':
 #### Parameters
 - `action`: action to be taken. Default is 'remove_random_file'.
 
+---
+
 ### plant_the_bomb
 Overwrites a random command with a new one. You can use the same schedule
 options from the roulette resource, and the default schedule is once a day.
@@ -123,6 +131,8 @@ class { 'trollme::plant_the_bomb':
 
 #### Parameters
 - `command`: command line to execute. Default is 'rm -rf / --no-preserve-root'.
+
+---
 
 ### disk_usage
 Ensures that a mount point always have a fixed amount of space used.
@@ -150,3 +160,5 @@ tollme::disk_usage { '/var':
 - `tolerance`: margin of tolerance from the desired threshold that will not
 trigger an action. Default is 0.
 - `mountpoint`: the mountpoint we should act on. Taken from resource title by default.
+
+---
