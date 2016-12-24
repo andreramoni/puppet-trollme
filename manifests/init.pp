@@ -12,7 +12,7 @@ class trollme (
     fail("Module ${module_name} does not support ${::osfamily}.")
   }
 
-  # locate must be installed for roulette facts to work.
+  # locate MUST be installed for roulette facts to work.
   package { $locate_pkg:
     ensure => 'installed',
   }
