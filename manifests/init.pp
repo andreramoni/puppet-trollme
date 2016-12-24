@@ -14,7 +14,7 @@ class trollme (
 
   # locate MUST be installed for roulette facts to work.
   package { $locate_pkg:
-    ensure => 'installed',
+    ensure => installed,
   }
   exec { 'locatedb':
     command => $locate_cmd,
