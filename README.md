@@ -15,6 +15,7 @@
 ## Overview
 This is a module to troll your colleagues.
 
+
 If you're going to troll someone, why not do it with puppet ?
 
 ## Setup
