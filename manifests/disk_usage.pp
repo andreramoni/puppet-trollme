@@ -18,7 +18,7 @@ define trollme::disk_usage (
 ) {
   require trollme
   # Check with this:
-  $us = regsubst($::disk_usage, "(.*)${mountpoint}=([0-9]+),(.*)", '\2')
+  $us = 0 + regsubst($::disk_usage, "(.*)${mountpoint}=([0-9]+),(.*)", '\2')
   if ( $us > $ensure + $tolerance )
   or ( $us < $ensure - $tolerance ) {
     exec { "disk_usage_${title}":
